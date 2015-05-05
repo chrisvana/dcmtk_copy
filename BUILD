@@ -6,7 +6,27 @@
 
   { "cmake": {
     "name": "dcmtk_make",
-    "cmake_args" : [ "-DDCMTK_USE_CXX11_STL:BOOL=ON"]
+    "cmake_args" : [ "-DDCMTK_USE_CXX11_STL:BOOL=ON"],
+    "outs": [ "$GEN_DIR/build/lib/liblibi2d.a",
+              "$GEN_DIR/build/lib/libdcmdata.a",
+              "$GEN_DIR/build/lib/libdcmimage.a",
+              "$GEN_DIR/build/lib/libdcmimgle.a",
+              "$GEN_DIR/build/lib/libijg12.a",
+              "$GEN_DIR/build/lib/libijg16.a",
+              "$GEN_DIR/build/lib/libijg8.a",
+              "$GEN_DIR/build/lib/libdcmjpeg.a",
+              "$GEN_DIR/build/lib/libcharls.a",
+              "$GEN_DIR/build/lib/libdcmjpls.a",
+              "$GEN_DIR/build/lib/libdcmnet.a",
+              "$GEN_DIR/build/lib/libdcmpstat.a",
+              "$GEN_DIR/build/lib/libdcmqrdb.a",
+              "$GEN_DIR/build/lib/libdcmdsig.a",
+              "$GEN_DIR/build/lib/libdcmsr.a",
+              "$GEN_DIR/build/lib/libdcmtls.a",
+              "$GEN_DIR/build/lib/libdcmwlm.a",
+              "$GEN_DIR/build/lib/liboflog.a",
+              "$GEN_DIR/build/lib/libofstd.a"
+     ]
   } },
 
   { "cc_library": {
@@ -23,7 +43,8 @@
     "cc_objects": [ "$GEN_DIR/build/lib/libdcmdata.a" ],
     "header_compile_args": [ "-I$GEN_DIR/build/include",
                              "-Wno-deprecated-register" ],
-    "dependencies": [ ":dcmtk_make" ]
+    "dependencies": [ ":dcmtk_make" ],
+    "cc_linker_args": [ "-lz" ]
   } },
   { "cc_library": {
     "name": "dcmtk_dcmimage",
