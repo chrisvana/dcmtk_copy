@@ -186,7 +186,7 @@
 
   { "cc_library": {
     "name": "dcmtk",
-    "dependencies": [ ":dcmtk_charls",
+    "dependencies": [ ":dcmtk_ofstd",  // order matters for gcc linker
                       ":dcmtk_dcmdata",
                       ":dcmtk_dcmdsig",
                       ":dcmtk_dcmimage",
@@ -203,8 +203,7 @@
                       ":dcmtk_ijg12",
                       ":dcmtk_ijg16",
                       ":dcmtk_ijg8",
-                      ":dcmtk_oflog",
-                      ":dcmtk_ofstd" ]
+                      ":dcmtk_oflog" ]
   } },
 
   { "cc_test": {
