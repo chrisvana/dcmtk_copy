@@ -7,7 +7,8 @@
   { "cmake": {
     "name": "dcmtk_make",
     "cmake_args" : [ "-DDCMTK_USE_CXX11_STL:BOOL=ON"],
-    "outs": [ "$GEN_DIR/build/lib/liblibi2d.a",
+    "outs": [ "$GEN_DIR/build/lib/libofstd.a",
+              "$GEN_DIR/build/lib/liblibi2d.a",
               "$GEN_DIR/build/lib/libdcmdata.a",
               "$GEN_DIR/build/lib/libdcmimage.a",
               "$GEN_DIR/build/lib/libdcmimgle.a",
@@ -24,8 +25,7 @@
               "$GEN_DIR/build/lib/libdcmsr.a",
               "$GEN_DIR/build/lib/libdcmtls.a",
               "$GEN_DIR/build/lib/libdcmwlm.a",
-              "$GEN_DIR/build/lib/liboflog.a",
-              "$GEN_DIR/build/lib/libofstd.a"
+              "$GEN_DIR/build/lib/liboflog.a"
      ]
   } },
 
